@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三谷一晃さん 送別会 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --sky:#00b4d8;--sky2:#0096b7;--sky3:#caf0f8;--skyp:#e0f7fc;
+  --pink:#e8559a;--pink2:#c73d82;--pinkl:#fde8f3;--pinkp:#fff0f8;
+  --ink:#1a1a2e;--ink2:#4a4a6a;--ink3:#9898b8;
+  --line:#e8eaf6;--bg:#f8faff;--white:#fff;
+  --r6:6px;--r10:10px;--r16:16px;--r24:24px;
+}
+body{background:var(--bg);font-family:'Noto Sans JP',sans-serif;color:var(--ink);}
+.app{max-width:430px;margin:0 auto;min-height:100vh;}
+
+/* NAV */
+.nav{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;}
+.nav-top{display:flex;align-items:center;justify-content:space-between;padding:10px 16px 0;}
+.nav-logo{display:flex;align-items:center;gap:8px;}
+.logo-mark{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--pink));display:flex;align-items:center;justify-content:center;}
+.logo-e{font-family:'Noto Serif JP',serif;font-size:14px;color:#fff;font-weight:400;}
+.logo-text{font-size:10px;letter-spacing:3px;color:var(--ink3);}
+.nav-date{font-size:10px;color:var(--ink3);letter-spacing:1px;}
+.nav-tabs{display:flex;border-top:1px solid var(--line);margin-top:8px;}
+.ntab{flex:1;padding:10px 4px;font-size:11px;color:var(--ink3);cursor:pointer;text-align:center;border-bottom:2px solid transparent;transition:all .2s;background:none;border-top:none;border-left:none;border-right:none;font-family:'Noto Sans JP',sans-serif;letter-spacing:.5px;}
+.ntab.on{color:var(--sky2);border-bottom-color:var(--sky);}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,var(--sky) 0%,#0077a8 45%,var(--pink) 100%);padding:36px 20px 44px;text-align:center;position:relative;overflow:hidden;}
+.hero-deco{position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.06);}
+.hero-deco2{position:absolute;bottom:-30px;left:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.06);}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:5px 14px;font-size:10px;color:rgba(255,255,255,.9);letter-spacing:2px;margin-bottom:20px;}
+.hero-name{font-family:'Noto Serif JP',serif;font-size:38px;font-weight:300;color:#fff;letter-spacing:5px;line-height:1.15;margin-bottom:4px;}
+.hero-roman{font-size:10px;letter-spacing:5px;color:rgba(255,255,255,.45);margin-bottom:18px;}
+.hero-bar{width:36px;height:2px;background:rgba(255,255,255,.6);margin:0 auto 18px;}
+.hero-sub{font-size:12px;color:rgba(255,255,255,.7);line-height:1.9;letter-spacing:.5px;}
+.hero-period{display:inline-block;margin-top:14px;font-size:11px;color:rgba(255,255,255,.55);letter-spacing:2px;border-top:1px solid rgba(255,255,255,.25);padding-top:12px;}
+.hero-btns{display:flex;gap:10px;justify-content:center;margin-top:24px;}
+.btn-ghost{padding:11px 20px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:99px;font-size:12px;cursor:pointer;font-family:'Noto Sans JP',sans-serif;letter-spacing:1px;transition:all .2s;}
+.btn-ghost:hover{background:rgba(255,255,255,.3);}
+.btn-white{padding:11px 20px;background:#fff;color:var(--sky2);border:none;border-radius:99px;font-size:12px;cursor:pointer;font-family:'Noto Sans JP',sans-serif;font-weight:500;letter-spacing:1px;}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:1fr 1fr;background:var(--white);border-bottom:1px solid var(--line);}
+.stat{padding:16px;text-align:center;position:relative;}
+.stat+.stat::before{content:'';position:absolute;left:0;top:20%;bottom:20%;width:1px;background:var(--line);}
+.stat-n{font-family:'Noto Serif JP',serif;font-size:28px;font-weight:300;color:var(--sky2);line-height:1;}
+.stat-u{font-size:10px;color:var(--sky2);}
+.stat-l{font-size:9px;color:var(--ink3);margin-top:5px;letter-spacing:.5px;}
+
+/* HOME */
+.home-body{padding:20px 16px;}
+.sec-hd{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.sec-hd-txt{font-size:9px;letter-spacing:3px;color:var(--ink3);white-space:nowrap;}
+.sec-hd-line{flex:1;height:1px;background:var(--line);}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
+.mcard{background:var(--white);border:1px solid var(--line);border-radius:var(--r16);padding:18px 14px;cursor:pointer;transition:all .22s;position:relative;overflow:hidden;}
+.mcard-top{width:100%;height:4px;background:linear-gradient(90deg,var(--sky),var(--pink));border-radius:var(--r16) var(--r16) 0 0;position:absolute;top:0;left:0;}
+.mcard:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,180,216,.12);}
+.mcard-icon{font-size:22px;margin-bottom:10px;display:block;}
+.mcard-name{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:4px;}
+.mcard-desc{font-size:11px;color:var(--ink3);line-height:1.5;}
+.mcard-cta{font-size:11px;color:var(--sky2);margin-top:10px;font-weight:500;}
+.home-note{background:linear-gradient(135deg,var(--skyp),var(--pinkp));border:1px solid var(--line);border-radius:var(--r16);padding:18px;margin-top:4px;}
+.home-note-txt{font-size:13px;color:var(--ink2);line-height:2.1;}
+
+/* SLIDESHOW */
+.photo-sec{padding:16px;}
+.slideshow{background:var(--white);border:1px solid var(--line);border-radius:var(--r16);overflow:hidden;}
+.slide-viewport{position:relative;overflow:hidden;touch-action:pan-y;}
+.slide-track{display:flex;transition:transform .4s cubic-bezier(.4,0,.2,1);}
+.slide{min-width:100%;aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(160deg,var(--skyp),var(--pinkp));user-select:none;overflow:hidden;}
+.slide img{width:100%;height:100%;object-fit:cover;}
+.slide-info{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.5));padding:20px 16px 14px;}
+.slide-cap{font-size:13px;color:#fff;font-weight:500;letter-spacing:.5px;}
+.slide-sub{font-size:11px;color:rgba(255,255,255,.75);margin-top:3px;}
+.slide-emoji-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%;}
+.slide-emoji{font-size:64px;margin-bottom:12px;}
+.slide-cap-plain{font-size:13px;color:var(--ink2);font-weight:500;letter-spacing:.5px;}
+.slide-sub-plain{font-size:11px;color:var(--ink3);margin-top:4px;}
+.slide-ctrl{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;}
+.slide-dots{display:flex;gap:6px;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--line);transition:all .25s;cursor:pointer;}
+.dot.on{background:var(--sky);width:18px;border-radius:3px;}
+.slide-arrows{display:flex;gap:8px;}
+.sarr{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;color:var(--ink2);transition:all .15s;}
+.sarr:hover{border-color:var(--sky);color:var(--sky);}
+.auto-toggle{font-size:11px;color:var(--ink3);cursor:pointer;padding:6px 12px;border:1px solid var(--line);border-radius:99px;background:var(--white);transition:all .2s;font-family:'Noto Sans JP',sans-serif;}
+.auto-toggle.playing{color:var(--sky2);border-color:var(--sky);}
+
+/* QUIZ */
+.quiz-wrap{padding:16px;}
+.qgate{background:var(--white);border:1px solid var(--line);border-radius:var(--r16);padding:24px;}
+.qbadge{display:inline-block;background:var(--skyp);color:var(--sky2);font-size:9px;letter-spacing:2px;padding:5px 14px;border-radius:99px;border:1px solid var(--sky3);margin-bottom:16px;}
+.qg-title{font-family:'Noto Serif JP',serif;font-size:21px;font-weight:300;color:var(--ink);margin-bottom:8px;}
+.qg-sub{font-size:13px;color:var(--ink2);line-height:1.9;margin-bottom:18px;}
+.prize-box{display:flex;align-items:center;gap:10px;background:var(--pinkp);border:1px solid rgba(232,85,154,.2);border-radius:var(--r10);padding:12px;margin-bottom:20px;}
+.prize-icon{font-size:20px;}
+.prize-txt{font-size:12px;color:var(--pink2);line-height:1.5;}
+.field-lbl{font-size:9px;letter-spacing:2px;color:var(--ink3);margin-bottom:6px;}
+.ni{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r10);font-size:14px;background:var(--bg);color:var(--ink);font-family:'Noto Sans JP',sans-serif;transition:border .2s;}
+.ni:focus{outline:none;border-color:var(--sky);}
+.startbtn{width:100%;margin-top:14px;padding:15px;background:linear-gradient(90deg,var(--sky),var(--pink));color:#fff;border:none;border-radius:99px;font-size:13px;letter-spacing:2px;cursor:pointer;font-family:'Noto Sans JP',sans-serif;font-weight:500;}
+.qp-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.qctr{font-size:10px;letter-spacing:2px;color:var(--ink3);}
+.qpts{font-size:13px;color:var(--sky2);font-weight:500;}
+.qbar{height:4px;background:var(--line);border-radius:2px;margin-bottom:20px;}
+.qfill{height:4px;background:linear-gradient(90deg,var(--sky),var(--pink));border-radius:2px;transition:width .5s cubic-bezier(.4,0,.2,1);}
+.qcard{background:var(--white);border:1px solid var(--line);border-radius:var(--r16);padding:20px 18px;margin-bottom:12px;}
+.qnum{font-size:9px;letter-spacing:3px;color:var(--sky2);margin-bottom:10px;}
+.qtext{font-family:'Noto Serif JP',serif;font-size:16px;font-weight:300;color:var(--ink);line-height:1.9;margin-bottom:18px;}
+.ch3s{display:flex;flex-direction:column;gap:9px;}
+.ch3{padding:14px 16px;border:1px solid var(--line);border-radius:var(--r10);font-size:13px;cursor:pointer;color:var(--ink);background:var(--white);text-align:left;font-family:'Noto Sans JP',sans-serif;display:flex;align-items:center;gap:12px;transition:all .15s;}
+.ch3-lbl{width:24px;height:24px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--ink3);flex-shrink:0;transition:all .15s;}
+.ch3:hover:not(:disabled){border-color:var(--sky);background:var(--skyp);}
+.ch3:hover:not(:disabled) .ch3-lbl{border-color:var(--sky);color:var(--sky);}
+.ch3.ok{background:#edfaf3;border-color:#27ae60;}
+.ch3.ok .ch3-lbl{background:#27ae60;border-color:#27ae60;color:#fff;}
+.ch3.ng{background:#fef0ef;border-color:#e74c3c;}
+.ch3.ng .ch3-lbl{background:#e74c3c;border-color:#e74c3c;color:#fff;}
+.ch3:disabled{cursor:default;}
+.verd{display:flex;gap:10px;padding:13px 14px;border-radius:var(--r10);font-size:12px;line-height:1.7;margin-top:2px;}
+.verd.ok{background:#edfaf3;border:1px solid rgba(39,174,96,.2);}
+.verd.ng{background:#fef0ef;border:1px solid rgba(231,76,60,.2);}
+.verd-txt{color:var(--ink2);}
+.nxtbtn{width:100%;padding:14px;background:linear-gradient(90deg,var(--sky),var(--pink));color:#fff;border:none;border-radius:99px;font-size:13px;letter-spacing:1px;cursor:pointer;font-family:'Noto Sans JP',sans-serif;font-weight:500;}
+.rescrd{background:var(--white);border:1px solid var(--line);border-radius:var(--r16);padding:28px 20px;text-align:center;margin-bottom:12px;}
+.res-lbl{font-size:9px;letter-spacing:3px;color:var(--ink3);margin-bottom:10px;}
+.res-big{font-family:'Noto Serif JP',serif;font-size:64px;font-weight:300;color:var(--sky2);line-height:1;}
+.res-den{font-size:14px;color:var(--ink3);}
+.res-bw{height:6px;background:var(--line);border-radius:3px;margin:16px 0 12px;}
+.res-bf{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--sky),var(--pink));transition:width 1s cubic-bezier(.4,0,.2,1);}
+.res-msg{font-size:14px;color:var(--ink2);line-height:1.8;}
+.rankcrd{background:var(--white);border:1px solid var(--line);border-radius:var(--r16);padding:16px 18px;margin-bottom:12px;}
+.rank-hd{font-size:9px;letter-spacing:3px;color:var(--ink3);margin-bottom:12px;}
+.rrow{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);}
+.rrow:last-child{border-bottom:none;}
+.rpos{width:30px;text-align:center;font-size:16px;}
+.rname{flex:1;font-size:13px;color:var(--ink);}
+.rscore{font-size:13px;color:var(--ink3);}
+.rrow.me .rname{color:var(--sky2);font-weight:500;}
+.rrow.me{background:var(--skyp);margin:0 -4px;padding-left:12px;padding-right:12px;border-radius:var(--r10);}
+.retrybtn{width:100%;padding:13px;background:none;border:1px solid var(--line);border-radius:99px;font-size:12px;letter-spacing:1px;cursor:pointer;color:var(--ink2);font-family:'Noto Sans JP',sans-serif;}
+
+/* LETTERS */
+.let-wrap{padding:16px;}
+.let-hero{background:linear-gradient(135deg,var(--skyp),var(--pinkp));border-radius:var(--r16);padding:28px 20px;text-align:center;margin-bottom:16px;}
+.let-to{font-size:9px;letter-spacing:4px;color:var(--ink3);margin-bottom:12px;}
+.let-name{font-family:'Noto Serif JP',serif;font-size:24px;font-weight:300;color:var(--ink);letter-spacing:3px;}
+.let-sub{font-size:11px;color:var(--ink3);margin-top:8px;letter-spacing:1px;}
+.let-bar{width:36px;height:2px;background:linear-gradient(90deg,var(--sky),var(--pink));margin:14px auto 0;}
+.letcard{background:var(--white);border:1px solid var(--line);border-radius:var(--r16);padding:20px 18px;margin-bottom:10px;}
+.letfrom{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.letav{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--pink));display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#fff;flex-shrink:0;}
+.letfname{font-size:13px;font-weight:500;color:var(--ink);}
+.letrole{font-size:11px;color:var(--ink3);margin-top:2px;}
+.letbody{font-size:13px;color:var(--ink2);line-height:2.1;}
+</style>
+</head>
+<body>
+<div class="app">
+
+<nav class="nav">
+  <div class="nav-top">
+    <div class="nav-logo">
+      <div class="logo-mark"><span class="logo-e">E</span></div>
+      <span class="logo-text">FAREWELL 2026</span>
+    </div>
+    <span class="nav-date">2026.03.19</span>
+  </div>
+  <div class="nav-tabs">
+    <button class="ntab on" id="t-home" onclick="go('home')">Home</button>
+    <button class="ntab" id="t-photos" onclick="go('photos')">Photos</button>
+    <button class="ntab" id="t-quiz" onclick="go('quiz')">Quiz</button>
+    <button class="ntab" id="t-letters" onclick="go('letters')">Letters</button>
+  </div>
+</nav>
+
+<div id="p-home">
+  <div class="hero">
+    <div class="hero-deco"></div><div class="hero-deco2"></div>
+    <div class="hero-tag">Eisai · Tama Area MR</div>
+    <div class="hero-name">三谷 一晃</div>
+    <div class="hero-roman">KAZUAKI MITANI</div>
+    <div class="hero-bar"></div>
+    <div class="hero-sub">医薬情報担当者（MR）<br>杏林大学エリア担当</div>
+    <div class="hero-period">2020.04 — 2026.03</div>
+    <div class="hero-btns">
+      <button class="btn-white" onclick="go('photos')">思い出を見る</button>
+      <button class="btn-ghost" onclick="go('quiz')">クイズに挑戦</button>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-n">6<span class="stat-u">年</span></div>
+      <div class="stat-l">在籍期間</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">∞</div>
+      <div class="stat-l">思い出の数</div>
+    </div>
+  </div>
+  <div class="home-body">
+    <div class="sec-hd"><div class="sec-hd-txt">CONTENTS</div><div class="sec-hd-line"></div></div>
+    <div class="menu-grid">
+      <div class="mcard" onclick="go('photos')">
+        <div class="mcard-top"></div>
+        <span class="mcard-icon">📸</span>
+        <div class="mcard-name">思い出写真</div>
+        <div class="mcard-desc">6年間の<br>フォトギャラリー</div>
+        <div class="mcard-cta">見る →</div>
+      </div>
+      <div class="mcard" onclick="go('quiz')">
+        <div class="mcard-top"></div>
+        <span class="mcard-icon">🎯</span>
+        <div class="mcard-name">クイズ大会</div>
+        <div class="mcard-desc">三谷さんを<br>どれだけ知ってる？</div>
+        <div class="mcard-cta">挑戦 →</div>
+      </div>
+      <div class="mcard" onclick="go('letters')" style="grid-column:span 2;">
+        <div class="mcard-top"></div>
+        <span class="mcard-icon">💌</span>
+        <div class="mcard-name">みんなから</div>
+        <div class="mcard-desc">チームからの感謝のメッセージ</div>
+        <div class="mcard-cta">読む →</div>
+      </div>
+    </div>
+    <div class="home-note">
+      <div class="home-note-txt">多摩エリアMRとして杏林大学を中心に6年間走り続けてくれた三谷さんへ。チームからの感謝と思い出を詰め込みました。ゆっくり楽しんでください。</div>
+    </div>
+  </div>
+</div>
+
+<div id="p-photos" style="display:none;">
+  <div class="photo-sec">
+    <div class="sec-hd" style="margin-bottom:14px;"><div class="sec-hd-txt">PHOTO MEMORIES</div><div class="sec-hd-line"></div></div>
+    <div class="slideshow">
+      <div class="slide-viewport" id="svp">
+        <div class="slide-track" id="strack"></div>
+      </div>
+      <div class="slide-ctrl">
+        <button class="auto-toggle playing" id="autoBtn" onclick="toggleAuto()">⏸ 自動再生中</button>
+        <div class="slide-dots" id="sdots"></div>
+        <div class="slide-arrows">
+          <button class="sarr" onclick="slideTo(cur-1)">‹</button>
+          <button class="sarr" onclick="slideTo(cur+1)">›</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="p-quiz" style="display:none;">
+  <div class="quiz-wrap">
+    <div id="qGate">
+      <div class="qgate">
+        <span class="qbadge">QUIZ · 全10問 · 3択</span>
+        <div class="qg-title">クイズ大会</div>
+        <div class="qg-sub">三谷さんにまつわるクイズです。<br>チームで一番詳しいのは誰だ？</div>
+        <div class="prize-box">
+          <span class="prize-icon">🏆</span>
+          <div class="prize-txt">上位者には景品あり！<br>全問正解を目指そう</div>
+        </div>
+        <div class="field-lbl">あなたのお名前</div>
+        <input class="ni" id="pname" placeholder="名前を入力してください" maxlength="16"/>
+        <button class="startbtn" onclick="startQ()">スタート ▶</button>
+      </div>
+    </div>
+    <div id="qPlay" style="display:none;">
+      <div class="qp-hd">
+        <span class="qctr" id="qCtr">Q 01 / 10</span>
+        <span class="qpts" id="qPts">0 pt</span>
+      </div>
+      <div class="qbar"><div class="qfill" id="qFill" style="width:0%"></div></div>
+      <div class="qcard">
+        <div class="qnum" id="qNum">QUESTION 1</div>
+        <div class="qtext" id="qText"></div>
+        <div class="ch3s" id="qChoices"></div>
+        <div id="qVerdict" style="display:none;margin-top:14px;"></div>
+      </div>
+      <button class="nxtbtn" id="qNext" style="display:none;" onclick="nextQ()">次の問題 →</button>
+    </div>
+    <div id="qResult" style="display:none;"></div>
+  </div>
+</div>
+
+<div id="p-letters" style="display:none;">
+  <div class="let-wrap">
+    <div class="let-hero">
+      <div class="let-to">TO</div>
+      <div class="let-name">三谷 一晃さんへ</div>
+      <div class="let-sub">チームからのメッセージ</div>
+      <div class="let-bar"></div>
+    </div>
+    <div id="letList"></div>
+  </div>
+</div>
+
+</div>
+<script>
+/* ==========================================================
+   ★ 編集ガイド ★
+   「★EDIT★」と書かれた箇所だけを変更してください。
+   それ以外は触らなくて大丈夫です。
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   ★EDIT★ 写真スライドショー
+   ----------------------------------------------------------
+   1枚 = { } ひとつのブロックです。
+
+   【絵文字で表示する場合】
+   { emoji:'🍻', caption:'タイトル', sub:'サブタイトル' },
+
+   【実際の写真を使う場合】 ← GitHubに写真をアップした後はこちら
+   { imageUrl:'photos/ファイル名.jpg', caption:'タイトル', sub:'サブタイトル' },
+
+   ★ 追加・削除・編集してください ★
+   ---------------------------------------------------------- */
+const PHOTOS = [
+  { emoji:'🍻', caption:'2020年 初めての忘年会',  sub:'入社してはじめての年末' },
+  { emoji:'🌸', caption:'杏林大学の春',            sub:'桜の季節、担当エリアの朝' },
+  { emoji:'🗻', caption:'2022年 社員旅行',          sub:'富士山バックで最高の一枚' },
+  { emoji:'🎂', caption:'誕生日サプライズ',         sub:'みんなで作戦会議した甲斐がありました！' },
+  { emoji:'⚽', caption:'2023年 運動会',            sub:'チーム優勝。三谷さんのおかげです' },
+  { emoji:'🏆', caption:'表彰式 2023',              sub:'最優秀MR賞、おめでとうございます！' },
+];
+
+/* ----------------------------------------------------------
+   ★EDIT★ クイズ問題
+   ----------------------------------------------------------
+   1問 = { } ひとつのブロックです。
+   - q    : 問題文
+   - cs   : 選択肢（必ず3つ）
+   - a    : 正解番号（A=0, B=1, C=2）
+   - note : 正解・不正解後のコメント
+
+   ★ 書き換えてください ★
+   ---------------------------------------------------------- */
+const QS = [
+  { q:'三谷さんがエーザイに入社した年は？',
+    cs:['2018年','2019年','2020年'], a:2,
+    note:'2020年入社。6年間、本当にお疲れ様でした！' },
+  { q:'三谷さんの主な担当病院は？',
+    cs:['東京医科大学病院','杏林大学医学部付属病院','慶應義塾大学病院'], a:1,
+    note:'杏林大学が主担当。多摩エリアの顔として活躍してくれました' },
+  { q:'三谷さんの趣味といえば？',
+    cs:['釣り','登山','ゴルフ'], a:1,
+    note:'登山派！百名山制覇を目標にしているとか' },
+  { q:'三谷さんの代名詞の口癖は？',
+    cs:['なるほどですね〜','いいっすね！','ちょっと待って'], a:1,
+    note:'「いいっすね！」。忘れられない名言でした笑' },
+  { q:'三谷さんが次に挑戦することは？',
+    cs:['大手企業へ転職','大学院に進学','起業'], a:2,
+    note:'なんと起業！医療×テックで新しい挑戦。応援しています！' },
+  { q:'三谷さんが担当したエリアは？',
+    cs:['城南エリア','多摩エリア','横浜エリア'], a:1,
+    note:'多摩エリア一筋6年。地域に根ざした活動でした' },
+  { q:'三谷さんの好きな食べ物は？',
+    cs:['ラーメン','カレー','寿司'], a:2,
+    note:'寿司派！月一で高級寿司屋に行くのが楽しみとのこと' },
+  { q:'エーザイのhhcスローガンは？',
+    cs:['Human Health Care','Care for Life','Health for All'], a:0,
+    note:'Human Health Care（hhc）。三谷さんはまさにhhc精神の体現者でした' },
+  { q:'三谷さんが在籍した部署の数は？',
+    cs:['1つ','2つ','3つ以上'], a:1,
+    note:'営業→マーケティングの2部署を経験しました' },
+  { q:'チームが三谷さんに一番伝えたいことは？',
+    cs:['いつでも戻ってこい','絶対に成功してほしい','6年間ありがとう'], a:2,
+    note:'もちろん全部本音です。本当にありがとうございました！！' },
+];
+
+/* ----------------------------------------------------------
+   ★EDIT★ みんなからのメッセージ
+   ----------------------------------------------------------
+   1人分 = { } ひとつのブロックです。
+   - initials : アバターのイニシャル（2文字）
+   - name     : 名前
+   - role     : 役職・関係
+   - message  : メッセージ本文
+
+   ★ 人数分コピーして追加してください ★
+   ---------------------------------------------------------- */
+const LETTERS = [
+  {
+    initials: 'YH',
+    name: '山田 花子',
+    role: 'チームリーダー',
+    message: '三谷さん、6年間本当にありがとうございました。MRとして杏林大学エリアをゼロから開拓してくれた姿、ずっと忘れません。起業、絶対うまくいきます。また多摩で飲みましょう。',
+  },
+  {
+    initials: 'ST',
+    name: '鈴木 太郎',
+    role: '同期入社',
+    message: '一緒に入社して、同じhhcの精神で歩んできた仲間。あの深夜の資料作りも、三谷さんがいたから乗り越えられた。新しいステージでも、あなたらしく全力で。陰ながら応援しています。',
+  },
+  {
+    initials: 'KS',
+    name: '佐藤 健一',
+    role: '上司',
+    message: '三谷くんの誠実さと行動力はチームの宝でした。医療の現場をより良くしたいという想い、起業という形で実現してほしい。健康に気をつけて。たまには顔を出してください。',
+  },
+];
+
+/* ==========================================================
+   ▼ 以下は動作コードです。触らないでください ▼
+   ========================================================== */
+let cur=0,autoTimer=null,isPlaying=true,touchX=0;
+let qcur=0,qsc=0,qans=false,pn='',ranking=[];
+try{ranking=JSON.parse(localStorage.getItem('eis_mk3')||'[]');}catch(e){}
+
+function go(p){
+  ['home','photos','quiz','letters'].forEach(id=>{
+    document.getElementById('p-'+id).style.display=id===p?'':'none';
+    const t=document.getElementById('t-'+id);
+    if(t)t.classList.toggle('on',id===p);
+  });
+  if(p==='photos'){renderSlides();startAuto();}
+  else stopAuto();
+  if(p==='letters')renderLetters();
+}
+function renderSlides(){
+  const track=document.getElementById('strack');
+  const dots=document.getElementById('sdots');
+  track.innerHTML=PHOTOS.map(p=>{
+    if(p.imageUrl){
+      return `<div class="slide" style="position:relative;">
+        <img src="${p.imageUrl}" alt="${p.caption}">
+        <div class="slide-info">
+          <div class="slide-cap">${p.caption}</div>
+          <div class="slide-sub">${p.sub}</div>
+        </div>
+      </div>`;
+    }else{
+      return `<div class="slide">
+        <div class="slide-emoji-wrap">
+          <div class="slide-emoji">${p.emoji}</div>
+          <div class="slide-cap-plain">${p.caption}</div>
+          <div class="slide-sub-plain">${p.sub}</div>
+        </div>
+      </div>`;
+    }
+  }).join('');
+  dots.innerHTML=PHOTOS.map((_,i)=>`<div class="dot ${i===0?'on':''}" onclick="slideTo(${i})"></div>`).join('');
+  const vp=document.getElementById('svp');
+  vp.addEventListener('touchstart',e=>{touchX=e.touches[0].clientX;},{passive:true});
+  vp.addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX-touchX;
+    if(Math.abs(dx)>40){dx<0?slideTo(cur+1):slideTo(cur-1);}
+  },{passive:true});
+  slideTo(0);
+}
+function slideTo(n){
+  cur=(n+PHOTOS.length)%PHOTOS.length;
+  document.getElementById('strack').style.transform=`translateX(-${cur*100}%)`;
+  document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===cur));
+}
+function startAuto(){stopAuto();if(isPlaying){autoTimer=setInterval(()=>slideTo(cur+1),3000);}}
+function stopAuto(){clearInterval(autoTimer);autoTimer=null;}
+function toggleAuto(){
+  isPlaying=!isPlaying;
+  const btn=document.getElementById('autoBtn');
+  btn.textContent=isPlaying?'⏸ 自動再生中':'▶ 自動停止中';
+  btn.classList.toggle('playing',isPlaying);
+  isPlaying?startAuto():stopAuto();
+}
+const ABC=['A','B','C'];
+function startQ(){
+  pn=document.getElementById('pname').value.trim()||'名無しさん';
+  qcur=0;qsc=0;
+  document.getElementById('qGate').style.display='none';
+  document.getElementById('qPlay').style.display='block';
+  renderQ();
+}
+function renderQ(){
+  qans=false;
+  const q=QS[qcur];
+  const pct=Math.round((qcur/QS.length)*100);
+  document.getElementById('qCtr').textContent=`Q ${String(qcur+1).padStart(2,'0')} / ${QS.length}`;
+  document.getElementById('qPts').textContent=`${qsc} pt`;
+  document.getElementById('qFill').style.width=pct+'%';
+  document.getElementById('qNum').textContent=`QUESTION ${qcur+1}`;
+  document.getElementById('qText').textContent=q.q;
+  document.getElementById('qVerdict').style.display='none';
+  document.getElementById('qNext').style.display='none';
+  document.getElementById('qChoices').innerHTML=q.cs.map((c,i)=>`
+    <button class="ch3" onclick="pick(${i})">
+      <span class="ch3-lbl">${ABC[i]}</span>${c}
+    </button>`).join('');
+}
+function pick(i){
+  if(qans)return;qans=true;
+  const q=QS[qcur];
+  document.querySelectorAll('.ch3').forEach((b,idx)=>{
+    b.disabled=true;
+    if(idx===q.a)b.classList.add('ok');
+    else if(idx===i)b.classList.add('ng');
+  });
+  if(i===q.a)qsc++;
+  document.getElementById('qPts').textContent=`${qsc} pt`;
+  const v=document.getElementById('qVerdict');
+  v.style.display='block';
+  const ok=i===q.a;
+  v.innerHTML=`<div class="verd ${ok?'ok':'ng'}"><span style="font-size:16px;flex-shrink:0;margin-top:1px;">${ok?'✓':'✕'}</span><span class="verd-txt">${ok?'正解！  ':'不正解  '}${q.note}</span></div>`;
+  const nb=document.getElementById('qNext');
+  nb.style.display='block';
+  nb.textContent=qcur<QS.length-1?'次の問題 →':'結果を見る ▶';
+}
+function nextQ(){qcur++;if(qcur>=QS.length)showResult();else renderQ();}
+function showResult(){
+  document.getElementById('qPlay').style.display='none';
+  ranking.push({n:pn,s:qsc});
+  ranking.sort((a,b)=>b.s-a.s);
+  try{localStorage.setItem('eis_mk3',JSON.stringify(ranking.slice(0,20)));}catch(e){}
+  const pct=Math.round(qsc/QS.length*100);
+  const msgs=['もう一度挑戦してみよう！','なかなかの健闘です！','優秀！三谷さん通ですね','さすが！ほぼ完璧！','満点！チームで一番詳しい！'];
+  const medals=['🥇','🥈','🥉'];
+  const rows=ranking.slice(0,5).map((r,i)=>`
+    <div class="rrow ${(r.n===pn&&r.s===qsc)?'me':''}">
+      <div class="rpos">${medals[i]||i+1+'位'}</div>
+      <div class="rname">${r.n}</div>
+      <div class="rscore">${r.s}/10</div>
+    </div>`).join('');
+  const res=document.getElementById('qResult');
+  res.style.display='block';
+  res.innerHTML=`
+    <div class="rescrd">
+      <div class="res-lbl">${pn}さんの結果</div>
+      <div><span class="res-big">${qsc}</span><span class="res-den"> / 10</span></div>
+      <div class="res-bw"><div class="res-bf" id="resFill" style="width:0%"></div></div>
+      <div class="res-msg">${msgs[Math.min(Math.floor(qsc/2.5),4)]}</div>
+    </div>
+    <div class="rankcrd"><div class="rank-hd">RANKING</div>${rows}</div>
+    <button class="retrybtn" onclick="retryQ()">もう一度挑戦する</button>`;
+  setTimeout(()=>{const b=document.getElementById('resFill');if(b)b.style.width=pct+'%';},100);
+}
+function retryQ(){
+  qcur=0;qsc=0;qans=false;
+  document.getElementById('qResult').style.display='none';
+  document.getElementById('qResult').innerHTML='';
+  document.getElementById('qGate').style.display='block';
+}
+function renderLetters(){
+  document.getElementById('letList').innerHTML=LETTERS.map(l=>`
+    <div class="letcard">
+      <div class="letfrom">
+        <div class="letav">${l.initials}</div>
+        <div><div class="letfname">${l.name}</div><div class="letrole">${l.role}</div></div>
+      </div>
+      <div class="letbody">${l.message}</div>
+    </div>`).join('');
+}
+</script>
+</body>
+</html>
